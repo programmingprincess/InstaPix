@@ -12,9 +12,12 @@
 		A9591A131C852AF800A486A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9591A111C852AF800A486A4 /* Main.storyboard */; };
 		A9591A151C852AF800A486A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9591A141C852AF800A486A4 /* Assets.xcassets */; };
 		A9591A181C852AF800A486A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9591A161C852AF800A486A4 /* LaunchScreen.storyboard */; };
+		A9591A201C852FE000A486A4 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = A9591A1F1C852FE000A486A4 /* Podfile */; };
+		D572FD146574420E79AC7BBB /* Pods_InstaPix.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57ABBB1196DA9A7D0F1B16CC /* Pods_InstaPix.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		57ABBB1196DA9A7D0F1B16CC /* Pods_InstaPix.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstaPix.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9591A0A1C852AF800A486A4 /* InstaPix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstaPix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9591A0D1C852AF800A486A4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A9591A0F1C852AF800A486A4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,9 @@
 		A9591A141C852AF800A486A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A9591A171C852AF800A486A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A9591A191C852AF800A486A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A9591A1F1C852FE000A486A4 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		D0FD40A5B0FAD90B55E2AAA6 /* Pods-InstaPix.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaPix.release.xcconfig"; path = "Pods/Target Support Files/Pods-InstaPix/Pods-InstaPix.release.xcconfig"; sourceTree = "<group>"; };
+		D333918013F65E67A3B329C7 /* Pods-InstaPix.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstaPix.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InstaPix/Pods-InstaPix.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D572FD146574420E79AC7BBB /* Pods_InstaPix.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		02EFD4929024CE594EED9B6A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D333918013F65E67A3B329C7 /* Pods-InstaPix.debug.xcconfig */,
+				D0FD40A5B0FAD90B55E2AAA6 /* Pods-InstaPix.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		47D6FE89B4F2D792D1952904 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				57ABBB1196DA9A7D0F1B16CC /* Pods_InstaPix.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A9591A011C852AF800A486A4 = {
 			isa = PBXGroup;
 			children = (
 				A9591A0C1C852AF800A486A4 /* InstaPix */,
 				A9591A0B1C852AF800A486A4 /* Products */,
+				A9591A1F1C852FE000A486A4 /* Podfile */,
+				02EFD4929024CE594EED9B6A /* Pods */,
+				47D6FE89B4F2D792D1952904 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +98,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A9591A1C1C852AF800A486A4 /* Build configuration list for PBXNativeTarget "InstaPix" */;
 			buildPhases = (
+				4890FD863FF8BCD7C0E294DA /* Check Pods Manifest.lock */,
 				A9591A061C852AF800A486A4 /* Sources */,
 				A9591A071C852AF800A486A4 /* Frameworks */,
 				A9591A081C852AF800A486A4 /* Resources */,
+				47C10490AD83BB980082A651 /* Embed Pods Frameworks */,
+				67A1B4D6C079DC98D9FEAF5D /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -124,11 +154,60 @@
 			files = (
 				A9591A181C852AF800A486A4 /* LaunchScreen.storyboard in Resources */,
 				A9591A151C852AF800A486A4 /* Assets.xcassets in Resources */,
+				A9591A201C852FE000A486A4 /* Podfile in Resources */,
 				A9591A131C852AF800A486A4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		47C10490AD83BB980082A651 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-InstaPix/Pods-InstaPix-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4890FD863FF8BCD7C0E294DA /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		67A1B4D6C079DC98D9FEAF5D /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-InstaPix/Pods-InstaPix-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		A9591A061C852AF800A486A4 /* Sources */ = {
@@ -245,6 +324,7 @@
 		};
 		A9591A1D1C852AF800A486A4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D333918013F65E67A3B329C7 /* Pods-InstaPix.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = InstaPix/Info.plist;
@@ -256,6 +336,7 @@
 		};
 		A9591A1E1C852AF800A486A4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D0FD40A5B0FAD90B55E2AAA6 /* Pods-InstaPix.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = InstaPix/Info.plist;
@@ -284,6 +365,7 @@
 				A9591A1E1C852AF800A486A4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
