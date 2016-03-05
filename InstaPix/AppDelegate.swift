@@ -39,18 +39,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
-    //take a picture and post! 
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String: AnyObject]) {
-        //get image captured by the UIImagePickerController 
-        
-        let originalImage = info[UIImagePickerControllerOriginalImage] as! UIImage
-        let editedImage = info[UIImagePickerControllerEditedImage] as! UIImage
-        
-        //Do something with the iamges here (based on your use case!!!)
-        
-        //Dismiss UIImagePickerController when finished; go back to original view controller 
-        //dismissViewControllerAnimated(true, completion: nil)
-    }
 
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
