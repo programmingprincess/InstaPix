@@ -7,16 +7,49 @@
 //
 
 import UIKit
+import Parse
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var storyboard = UIStoryboard(name: "Main", bundle: nil)
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        Parse.initializeWithConfiguration(
+            ParseClientConfiguration(block: { (configuration:ParseMutableClientConfiguration) -> Void in
+                configuration.applicationId = "InstaPix"
+                configuration.clientKey = "pifkYYAQ3JAA"
+                configuration.server = "https://lit-badlands-59430.herokuapp.com/parse"
+            })
+        )
+        
+        //check if user is logged in
+        if PFUser.currentUser() != nil {
+            //if there is a logged in user, then load the profile view controller
+            let mainView = storyboard.instantiateViewControllerWithIdentifier("profileView")
+            window?.rootViewController = mainView
+
+            //self.window?.rootViewController = self.storyboard?.instantiateViewControllerWithIdentifier("profileView")
+        }
+        
+        
         return true
+    }
+    
+    //take a picture and post! 
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String: AnyObject]) {
+        //get image captured by the UIImagePickerController 
+        
+        let originalImage = info[UIImagePickerControllerOriginalImage] as! UIImage
+        let editedImage = info[UIImagePickerControllerEditedImage] as! UIImage
+        
+        //Do something with the iamges here (based on your use case!!!)
+        
+        //Dismiss UIImagePickerController when finished; go back to original view controller 
+        //dismissViewControllerAnimated(true, completion: nil)
     }
 
     func applicationWillResignActive(application: UIApplication) {
