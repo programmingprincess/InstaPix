@@ -37,8 +37,9 @@ Please list two areas of the assignment you'd like to **discuss further with you
 Here's a walkthrough of implemented user stories:
 
 <img src='http://i.imgur.com/y9psCE1.gif' title='Video Walkthrough' width='' alt='InstaPix Video Walkthrough' />
-<img src = "http://i.imgur.com/y9psCE1.gif">
-url: http://i.imgur.com/y9psCE1.gif
+
+![InstaPix Gif Walkthrough](http://i.imgur.com/y9psCE1.gif)
+
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## Notes
